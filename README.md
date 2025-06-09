@@ -1,4 +1,3 @@
-# ADSmvp4
 
 # Saquarema Verde Online - MVP
 
