@@ -20,6 +20,14 @@ body {
   margin: 0;
 }
 
+h1 {
+  color: black;
+}
+
+label {
+  color: black;
+}
+
 button {
   font-size: 1em;
   font-weight: 500;
