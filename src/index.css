@@ -3,7 +3,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #e0ffe6;
+  color: black;
   background-color: #e0ffe6;
 }
 
@@ -24,8 +24,18 @@ h1 {
   color: black;
 }
 
+img {
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+}
+
 label {
   color: black;
+}
+
+li {
+  list-style: none;
 }
 
 button {

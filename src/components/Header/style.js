@@ -38,6 +38,7 @@ export const HeaderConteiner = styled.div`
 
   h1 {
     font-size: 20px;
+    cursor: pointer;
     color: rgb(0, 0, 0);
   }
 `;

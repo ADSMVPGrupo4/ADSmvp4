@@ -1,22 +1,24 @@
 import { HeaderConteiner } from "./style";
 import logo from "../../assets/logo.png";
 
-const Header = () => {
+const Header = ({ setOptions, adminStatus }) => {
   return (
     <>
       <HeaderConteiner>
         <div>
-          <img src={logo} alt="Logo" />
-          <h1>Saquarema Verde Online</h1>
+          <img onClick={() => setOptions("Menu")} src={logo} alt="Logo" />
+          <h1 onClick={() => setOptions("Menu")}>Saquarema Verde Online</h1>
         </div>
         <div>
-          <a>Contate-nos</a>
-          <a>Atualizações </a>
+          <a onClick={() => setOptions("Contato")}>Contate-nos</a>
+          <a onClick={() => setOptions("Atualizar")}>Atualizações</a>
         </div>
 
         <div>
-          <a>Área Administrativa</a>
-          <button>Login</button>
+          <a onClick={() => setOptions("Admin")}>Área Administrativa</a>
+          {adminStatus === false ? (
+            <button onClick={() => setOptions("Login")}>Login</button>
+          ) : null}
         </div>
       </HeaderConteiner>
     </>

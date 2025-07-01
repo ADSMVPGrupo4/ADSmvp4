@@ -1,23 +1,55 @@
+import AdminArea from "../../components/AdminArea/script";
 import Footer from "../../components/Footer/script";
 import Header from "../../components/Header/script";
+import UpdateEvent from "../../components/UpdateEvent/script";
+import CreateEvent from "../../components/CreateEvent/script";
+import EventList from "../../components/EventsList/script";
+import Login from "../../components/Login/script";
+import Contact from "../../components/Contact/script";
 
-const MainMenu = () => {
+const MainMenu = ({
+  options,
+  setOptions,
+  events,
+  setEvents,
+  adminStatus,
+  setAdminStatus,
+  userList,
+}) => {
   return (
     <>
-      <Header />
+      <Header setOptions={setOptions} adminStatus={adminStatus} />
+      <EventList options={options} events={events} setEvents={setEvents} />
+      <Contact options={options} setOptions={setOptions} />
 
-      {/* <div>
-        <h1>Eventos Recentes</h1>
-        <img src="" alt="Imagem" />
-        <h1>Evento 1</h1>
-        <img src="" alt="Imagem" />
-        <h1>Evento 2</h1>
-        <img src="" alt="Imagem" />
-        <h1>Evento 3</h1>
-        <img src="" alt="Imagem" />
-        <h1>Evento 4</h1>
-        <h1>Áreas protegidas de Saquarema</h1>
-      </div> */}
+      <AdminArea
+        options={options}
+        setOptions={setOptions}
+        adminStatus={adminStatus}
+        events={events}
+        setEvents={setEvents}
+      />
+      <Login
+        options={options}
+        setOptions={setOptions}
+        userList={userList}
+        adminStatus={adminStatus}
+        setAdminStatus={setAdminStatus}
+      />
+
+      <UpdateEvent
+        options={options}
+        setOptions={setOptions}
+        events={events}
+        setEvents={setEvents}
+      />
+      <CreateEvent
+        options={options}
+        setOptions={setOptions}
+        events={events}
+        setEvents={setEvents}
+      />
+
       <Footer />
     </>
   );
