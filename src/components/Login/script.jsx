@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { LoginConteiner } from "./style";
 
 const Login = ({ options, setOptions, userList, setAdminStatus }) => {
   const [statusLogin, setStatusLogin] = useState("");
@@ -27,28 +28,34 @@ const Login = ({ options, setOptions, userList, setAdminStatus }) => {
   }
   return options === "Login" ? (
     <>
-      <form onSubmit={() => checkLogin()}>
-        <div>
-          <label>Usuário</label>
-          <input
-            type="text"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-          />
-        </div>
+      <LoginConteiner>
+        <form onSubmit={() => checkLogin()}>
+          <div>
+            <label>Usuário</label>
+            <div>
+              <input
+                type="text"
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+              />
+            </div>
+          </div>
 
-        <div>
-          <label>Senha</label>
-          <input
-            type="text"
-            value={userPassword}
-            onChange={(e) => setUserPassword(e.target.value)}
-          />
-        </div>
+          <div>
+            <label>Senha</label>
+            <div>
+              <input
+                type="text"
+                value={userPassword}
+                onChange={(e) => setUserPassword(e.target.value)}
+              />
+            </div>
+          </div>
 
-        <button type="submit">Entrar</button>
-        <h1>{statusLogin}</h1>
-      </form>
+          <button type="submit">Entrar</button>
+          <h1>{statusLogin}</h1>
+        </form>
+      </LoginConteiner>
     </>
   ) : null;
 };

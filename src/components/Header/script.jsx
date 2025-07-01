@@ -11,7 +11,9 @@ const Header = ({ setOptions, adminStatus }) => {
         </div>
         <div>
           <a onClick={() => setOptions("Contato")}>Contate-nos</a>
-          <a onClick={() => setOptions("Atualizar")}>Atualizações</a>
+          {adminStatus === true ? (
+            <a onClick={() => setOptions("Atualizar")}>Atualizações</a>
+          ) : null}
         </div>
 
         <div>
