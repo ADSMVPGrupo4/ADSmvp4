@@ -1,5 +1,10 @@
 import EventCard from "../EventCard/script";
-import { AreaProtegida, EventListConteiner, EventCardConteiner } from "./style";
+import {
+  EventCardConteiner,
+  ParqueSaquarema,
+  AreaProtegidaTexto,
+  AreaProtegidaConteiner,
+} from "./style";
 
 const EventList = ({ options, events, adminStatus }) => {
   return options === "Menu" ? (
@@ -21,11 +26,16 @@ const EventList = ({ options, events, adminStatus }) => {
         ))}
       </EventCardConteiner>
 
-      <AreaProtegida>Áreas Protegidas de Saquarema</AreaProtegida>
+      <AreaProtegidaTexto>Áreas Protegidas de Saquarema</AreaProtegidaTexto>
 
-      <EventListConteiner>
+      <AreaProtegidaConteiner>
         <div>
-          <img src="" alt="Imagem Parque Estadual" />
+          <ParqueSaquarema
+            src="https://cdn.discordapp.com/attachments/1377001131149889709/1389700517852086442/maxresdefault.png?ex=686592f6&is=68644176&hm=7487d5401c9d2919597b14bd9b93fe0f805000c09cbfbf5a041433d8e6876848&"
+            alt="Imagem Parque Estadual"
+          />
+
+          <h1>Parque Estadual da Costa do Sol</h1>
 
           <p>
             O Parque Estadual da Costa do Sol protege ecossistemas costeiros de
@@ -52,7 +62,12 @@ const EventList = ({ options, events, adminStatus }) => {
         </div>
 
         <div>
-          <img src="" alt="Imagem Reserva Ecológica" />
+          <ParqueSaquarema
+            src="https://cdn.discordapp.com/attachments/1377001131149889709/1389703440187392182/image.png?ex=686595af&is=6864442f&hm=ff6ae72036604d515a1875a7661e58a34bd0573b5270e76fed8c93350945dab9&"
+            alt="Imagem Reserva Ecológica"
+          />
+
+          <h1>Reserva Ecológica</h1>
           <p>
             A Reserva Estadual Ecológica de Jacarepiá protege importantes áreas
             de restinga e ecossistemas associados à Lagoa de Jacarepiá. Serve
@@ -76,7 +91,7 @@ const EventList = ({ options, events, adminStatus }) => {
           <li>Leve água suficiente </li>
           <li>Não alimente os animais silvestres</li>
         </div>
-      </EventListConteiner>
+      </AreaProtegidaConteiner>
     </>
   ) : null;
 };
