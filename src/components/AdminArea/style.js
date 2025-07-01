@@ -5,6 +5,8 @@ export const AdminAreaConteiner = styled.div`
 
   div {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 1rem;
   }
 `;

@@ -2,25 +2,25 @@ import { useState } from "react";
 
 const UpdateEvent = ({ options, setOptions, events, setEvents }) => {
   const [selectedId, setSelectedId] = useState("");
-  const [newTitle, setNewTitle] = useState("");
+  const [newStatus, setNewStatus] = useState("");
 
   const handleUpdate = (e) => {
     e.preventDefault();
 
     const updatedEvents = events.map((event, index) =>
-      index === parseInt(selectedId) ? { ...event, title: newTitle } : event,
+      index === parseInt(selectedId) ? { ...event, status: newStatus } : event,
     );
 
     setEvents(updatedEvents);
     setSelectedId("");
-    setNewTitle("");
+    setNewStatus("");
     setOptions("Menu");
   };
 
   return options === "Atualizar" ? (
     <form onSubmit={handleUpdate}>
       <div>
-        <h1>Atualizar Evento:</h1>
+        <h1>Atualizar Situação do Evento:</h1>
 
         <label>Selecione o Evento:</label>
         <select
@@ -38,13 +38,17 @@ const UpdateEvent = ({ options, setOptions, events, setEvents }) => {
       </div>
 
       <div>
-        <label>Novo Título:</label>
-        <input
-          type="text"
-          value={newTitle}
-          onChange={(e) => setNewTitle(e.target.value)}
+        <label>Situação</label>
+        <select
           required
-        />
+          value={newStatus}
+          onChange={(e) => setNewStatus(e.target.value)}
+        >
+          <option value="Selecione Aqui">Selecione aqui</option>
+          <option value="Pendente">Pendente</option>
+          <option value="Cancelado">Cancelado</option>
+          <option value="Finalizado">Finalizado</option>
+        </select>
       </div>
 
       <button type="submit">Salvar Alteração</button>

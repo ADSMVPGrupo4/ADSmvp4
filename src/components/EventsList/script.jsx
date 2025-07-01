@@ -1,12 +1,13 @@
 import EventCard from "../EventCard/script";
 import { AreaProtegida, EventListConteiner } from "./style";
 
-const EventList = ({ options, events }) => {
+const EventList = ({ options, events, adminStatus }) => {
   return options === "Menu" ? (
     <>
       <ul>
         {events.map((event) => (
           <EventCard
+            adminStatus={adminStatus}
             key={event.id}
             image={event.image}
             title={event.title}
@@ -15,6 +16,7 @@ const EventList = ({ options, events }) => {
             time={event.time}
             local={event.local}
             activityType={event.activityType}
+            status={event.status}
           />
         ))}
       </ul>

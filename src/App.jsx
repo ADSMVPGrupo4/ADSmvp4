@@ -15,7 +15,10 @@ function App() {
       status: "Pendente",
     },
   ]);
-  const [userList, setUserList] = useState({ name: "teste", password: "123" });
+  const [userList, setUserList] = useState({
+    name: "admin",
+    password: "admin",
+  });
   const [adminStatus, setAdminStatus] = useState(false);
 
   return (

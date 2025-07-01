@@ -6,6 +6,8 @@ const EventCard = ({
   time,
   local,
   activityType,
+  status,
+  adminStatus,
 }) => {
   return (
     <li>
@@ -16,6 +18,7 @@ const EventCard = ({
       <p>{time}</p>
       <p>{local}</p>
       <p>{activityType}</p>
+      <p>{status}</p>
     </li>
   );
 };
