@@ -114,10 +114,9 @@ Benefícios para Administradores:
 
 Figma:
 
-Utilizamos o Figma para realizar a prototipação do site, com cinco telas:
+Utilizamos o Figma para realizar a prototipação do site, com 4 telas:
 
 1. Página inicial
 2. Área restrita para os administradores
 3. Área de cadastro de eventos
 4. Área de cadastro de atualizações
-5. Lista de eventos
