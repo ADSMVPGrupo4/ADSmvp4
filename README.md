@@ -25,14 +25,61 @@ Para o MVP Front-End, as seguintes tecnologias foram utilizadas:
 
 # Instruções para Executar/Abrir o MVP:
 
-1.  Certifique-se de ter um navegador web moderno instalado (Google Chrome,
-    Mozilla Firefox, Safari, etc.).
-2.  Salve os arquivos HTML, CSS e JavaScript do MVP em uma pasta no seu
-    computador.
-3.  Abra o arquivo “index.html” com o seu navegador web. Clique com o botão
-    direito no arquivo e selecione "Abrir com" seguido do seu navegador
-    preferido.
-4.  O website do "Saquarema Verde Online" será exibido no seu navegador.
+1.  Pré-requisitos:
+Node.js (https://nodejs.org/)
+Git (https://git-scm.com/downloads)
+Yarn (opcional)
+
+---
+
+Passo 1: Clonar o repositório
+git clone https://github.com/ADSMVPGrupo4/ADSmvp4.git
+`
+
+---
+
+Passo 2: Acessar a pasta do projeto
+cd ADSmvp4
+
+
+---
+
+Passo 3: Instalar as dependências
+#### Com Yarn:
+
+yarn install
+
+
+#### Ou com NPM:
+
+npm install
+
+
+---
+
+Passo 4: Executar o projeto
+#### Com Yarn:
+
+yarn dev
+
+
+#### Ou com NPM:
+
+npm run dev
+
+---
+
+Passo 5: Clicar com o botão esquerdo no ip que aparecer no terminal
+
+---
+
+OU
+
+---
+
+Passo 1: Abrir o link:https://adsmvp4.vercel.app/
+
+---
 
 # Informações Adicionais que Forem Necessárias:
 
