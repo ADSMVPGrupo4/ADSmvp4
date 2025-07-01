@@ -9,7 +9,7 @@ const EventCard = ({
 }) => {
   return (
     <li>
-      <img src={image} alt="Imagem do Evento" />
+      {image && <img src={image} alt={title} />}
       <h3>{title}</h3>
       <p>{description}</p>
       <p>{date}</p>

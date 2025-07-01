@@ -12,6 +12,7 @@ function App() {
       activityType: "Campeonato",
       image: "logo.png",
       description: "TESTE",
+      status: "Pendente",
     },
   ]);
   const [userList, setUserList] = useState({ name: "teste", password: "123" });
