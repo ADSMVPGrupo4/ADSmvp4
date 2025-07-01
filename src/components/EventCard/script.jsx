@@ -1,3 +1,5 @@
+import { EventCardConteiner, Card } from "./style";
+
 const EventCard = ({
   image,
   title,
@@ -7,19 +9,18 @@ const EventCard = ({
   local,
   activityType,
   status,
-  adminStatus,
 }) => {
   return (
-    <li>
+    <Card>
       {image && <img src={image} alt={title} />}
       <h3>{title}</h3>
       <p>{description}</p>
-      <p>{date}</p>
-      <p>{time}</p>
-      <p>{local}</p>
-      <p>{activityType}</p>
-      <p>{status}</p>
-    </li>
+      <p>Data: {date}</p>
+      <p>Horário: {time}</p>
+      <p>Local: {local}</p>
+      <p>Tipo: {activityType}</p>
+      <p>Status: {status}</p>
+    </Card>
   );
 };
 

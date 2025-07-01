@@ -9,8 +9,14 @@ export const EventListConteiner = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 20rem;
+  width: 250px  
+  height: 280px
+`;
 
-  div {
-    width: 40%;
-  }
+export const EventCardConteiner = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  margin-top: 6rem;
 `;

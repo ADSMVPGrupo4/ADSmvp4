@@ -1,10 +1,10 @@
 import EventCard from "../EventCard/script";
-import { AreaProtegida, EventListConteiner } from "./style";
+import { AreaProtegida, EventListConteiner, EventCardConteiner } from "./style";
 
 const EventList = ({ options, events, adminStatus }) => {
   return options === "Menu" ? (
     <>
-      <ul>
+      <EventCardConteiner>
         {events.map((event) => (
           <EventCard
             adminStatus={adminStatus}
@@ -19,7 +19,7 @@ const EventList = ({ options, events, adminStatus }) => {
             status={event.status}
           />
         ))}
-      </ul>
+      </EventCardConteiner>
 
       <AreaProtegida>Áreas Protegidas de Saquarema</AreaProtegida>
 
